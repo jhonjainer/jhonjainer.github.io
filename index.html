@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jhon Jainer Chacon">
+    <meta name="description" content="Programacion para todos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera página web</title>
+    <!--<Etiqueta para definir estilos de los objetos-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p>&#169; 2025 <a href="https://landing.bitinstitute.co/bootcamp-desarrollo-de-aplicaciones-moviles-con-ionic/?CEDetalleFuente=DFV_LANDINGPROGRAMA&CEDetalleMedio=DMV_GOOGLE&CECampania=1738199078&gad_source=1&gclid=Cj0KCQiAwtu9BhC8ARIsAI9JHanJaHJSnrWZMv9OXW8AnmlsOTe53QS8IntGbrOt6BFS4uI7sI-amYYaAi9fEALw_wcB">Programación</a></p>
+        <a id="logo-header" href=""><img src="ContenidoMultimedia/Imagen1.1.jpeg" width="100" height="100"></a>
+        <h1 id="site-name">Programación</h1>
+    </header>
+
+    <br><br><br><br><br>
+	<script> 
+		var visible = false; 
+		function iniciar() { 
+		var elemento = document.getElementById("menu-img"); 
+		elemento.addEventListener("click", mostrarMenu); 
+		} 
+		function mostrarMenu() { 
+		var elemento = document.getElementById("menuprincipal"); 
+		if (!visible) { 
+		elemento.style.display = "block"; 
+		visible = true; 
+		} else { 
+		elemento.style.display = "none"; 
+		visible = false; 
+		} 
+		} 
+		window.addEventListener("load", iniciar); 
+    </script> 
+
+
+
+    <nav id="menuicono">
+        <!-- Aquí el icono del menú -->
+        <img src="ContenidoMultimedia/Imagen.icono.jpeg" width="35" height="28" id="menu-img" alt="Menu Icono">
+    </nav>
+
+    <!-- Menú principal que inicialmente estará oculto -->
+    <nav id="menuprincipal" style="display: none;">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Temas.html">Temas</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="Videos.html">Videos</a></li>
+            <li><a href="Preguntas.html">Preguntas</a></li>
+        </ul>
+    </nav>
+
+	
+
+    <article>
+        <!--<Etiqueta para anuncios en la parte derecha-->
+        <aside style="float:right; padding-left: 10px;">
+            <p>&#169; 2025 <a href="https://landing.bitinstitute.co/bootcamp-desarrollo-de-aplicaciones-moviles-con-ionic/?CEDetalleFuente=DFV_LANDINGPROGRAMA&CEDetalleMedio=DMV_GOOGLE&CECampania=1738199078&gad_source=1&gclid=Cj0KCQiAwtu9BhC8ARIsAI9JHanJaHJSnrWZMv9OXW8AnmlsOTe53QS8IntGbrOt6BFS4uI7sI-amYYaAi9fEALw_wcB">Programación</a></p>
+            <div><a href=""><img src="ContenidoMultimedia/Imagen1.2.jpeg" width="220" height="200"></a></div>
+        </aside>
+
+        <br>
+        <h2>Programación</h2>
+        <p>Programación es la acción de programar que implica ordenar, estructurar o componer una serie de acciones cronológicas para cumplir un objetivo. <i>La programación puede ser aplicada para eventos sociales</i>. La programación puede ser aplicada para eventos sociales, a medios de comunicación y al mundo informático de las computadoras.</p>
+
+        <p>En informática, <mark>la programación es el uso de lenguajes informáticos</mark> para imprimir en un sistema computacional funciones y procesos deseados.</p>
+
+        <p>La programación de una computadora es la forma de indicar a la computadora qué es lo que tiene que hacer. Un lenguaje de programación es, en la ciencia de la computación, la herramienta para automatizar informaciones y acciones a través de una computadora.</p>
+
+        <p>Los lenguajes de programación más conocidos son: Basic (1964), C++ (1983), Python (1991), Java (1995), C# (2000), entre otros.</p>
+
+        <p>La programación es una de las etapas para el desarrollo de un programa o software. La programación especifica la estructura y el comportamiento de un programa verificando si está funcionando adecuadamente o no.</p>
+
+        <p>La programación incluye la especificación del algoritmo definida como la secuencia de pasos y operaciones que el programa debe realizar para resolver un problema. Para que el algoritmo funcione, el programa debe estar implementado en un lenguaje compatible y correcto.</p>
+    </article>
+
+    <footer>
+        <p>&#169; 2025 <a href="https://landing.bitinstitute.co/bootcamp-desarrollo-de-aplicaciones-moviles-con-ionic/?CEDetalleFuente=DFV_LANDINGPROGRAMA&CEDetalleMedio=DMV_GOOGLE&CECampania=1738199078&gad_source=1&gclid=Cj0KCQiAwtu9BhC8ARIsAI9JHanJaHJSnrWZMv9OXW8AnmlsOTe53QS8IntGbrOt6BFS4uI7sI-amYYaAi9fEALw_wcB">Programación</a></p>
+    </footer>
+</body>
+
+</html>
