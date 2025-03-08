@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Programación</title>
+    <link rel="stylesheet" href="CSS.Estyle.css">
+
+    <script>
+        function checkAnswer(questionIndex, correctOption) {
+            // Utiliza las comillas invertidas para interpolar la variable dentro de la cadena
+            let selectedOption = document.querySelector(`input[name='q${questionIndex}']:checked`);
+            
+            // Corregir la interpolación en el ID del resultado
+            let resultElement = document.getElementById(`result${questionIndex}`);
+            
+            // Verifica si se ha seleccionado una opción
+            if (selectedOption) {
+                // Compara el valor de la opción seleccionada con la opción correcta
+                if (selectedOption.value === correctOption) {
+                    resultElement.textContent = "Respuesta correcta!";
+                    resultElement.className = "correct"; // Clase para la respuesta correcta
+                } else {
+                    resultElement.textContent = "Respuesta incorrecta.";
+                    resultElement.className = "incorrect"; // Clase para la respuesta incorrecta
+                }
+            }
+        }
+    </script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Temas.html">Temas</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="Videos.html">Videos</a></li>
+            <li><a href="Preguntas.html">Preguntas</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <h1>Preguntas de programacion</h1>
+    <form>
+        <div class="question">
+            <p>1. ¿Qué significa HTML?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a"> Hyper Trainer Marking Language</li>
+                <li><input type="radio" name="q1" value="b"> Hyper Text Markup Language</li>
+                <li><input type="radio" name="q1" value="c"> Home Tool Markup Language</li>
+                <li><input type="radio" name="q1" value="d"> None of the above</li>
+            </ul>
+            <button type="button" onclick="checkAnswer(1, 'b')">Verificar</button>
+            <p id="result1"></p>
+        </div>
+        
+        <div class="question">
+            <p>2. ¿Cuál de los siguientes es un lenguaje de programación?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a"> HTML</li>
+                <li><input type="radio" name="q2" value="b"> CSS</li>
+                <li><input type="radio" name="q2" value="c"> JavaScript</li>
+                <li><input type="radio" name="q2" value="d"> XML</li>
+            </ul>
+            <button type="button" onclick="checkAnswer(2, 'c')">Verificar</button>
+            <p id="result2"></p>
+        </div>
+        
+        <!-- Se agregan más preguntas hasta completar 20 -->
+        <script>
+            const preguntas = [
+                ["¿Qué lenguaje se usa para el desarrollo de aplicaciones Android nativas?", "Swift", "Kotlin", "Python", "PHP", "b"],
+                ["¿Qué estructura de control se usa para iteraciones?", "if-else", "for", "switch", "try-catch", "b"],
+                ["¿Qué significa CSS?", "Cascading Style Sheets", "Computer Style Sheets", "Creative Style Sheets", "Colorful Style Sheets", "a"],
+                ["¿Qué lenguaje es utilizado principalmente para desarrollo web en el lado del servidor?", "JavaScript", "Python", "PHP", "Java", "c"],
+                ["¿Qué tipo de dato se usa para representar valores verdaderos o falsos en Java?", "boolean", "int", "float", "char", "a"],
+                ["¿Cuál de las siguientes estructuras de datos sigue la regla LIFO?", "Cola", "Lista enlazada", "Pila", "Árbol", "c"],
+                ["¿Qué etiqueta HTML se usa para definir una lista ordenada?", "<ul>", "<ol>", "<li>", "<dl>", "b"],
+                ["¿Cuál es el resultado de 2 + '2' en JavaScript?", "4", "22", "Error", "NaN", "b"],
+                ["¿Qué símbolo se usa para acceder a una propiedad de un objeto en JavaScript?", ".", "::", "->", "=>", "a"],
+                ["¿Qué método de Array en JavaScript agrega un elemento al final?", "push()", "pop()", "shift()", "unshift()", "a"],
+                ["¿Cuál de estos es un sistema de control de versiones?", "Git", "Docker", "Jenkins", "Kubernetes", "a"],
+                ["¿Qué protocolo se usa para transferir páginas web?", "HTTP", "FTP", "SSH", "SMTP", "a"],
+                ["¿Cuál de estos lenguajes no es orientado a objetos?", "C++", "Java", "Python", "C", "d"],
+                
+            ];
+            
+            preguntas.forEach((pregunta, index) => {
+                document.write(`<div class="question">
+                    <p>${index + 3}. ${pregunta[0]}</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q${index + 3}" value="a"> ${pregunta[1]}</li>
+                        <li><input type="radio" name="q${index + 3}" value="b"> ${pregunta[2]}</li>
+                        <li><input type="radio" name="q${index + 3}" value="c"> ${pregunta[3]}</li>
+                        <li><input type="radio" name="q${index + 3}" value="d"> ${pregunta[4]}</li>
+                    </ul>
+                    <button type="button" onclick="checkAnswer(${index + 3}, '${pregunta[5]}')">Verificar</button>
+                    <p id="result${index + 3}"></p>
+                </div>`);
+            });
+        </script>
+    </form>
+</body>
+</html>
+
