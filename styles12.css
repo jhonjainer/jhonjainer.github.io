@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: black;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el contenido principal */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+h1 {
+    color: #d6336c;
+    text-align: center;
+}
+
+/* Estilos para las preguntas */
+.preguntas {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.preguntas h2 {
+    color: #d6336c;
+    text-align: center;
+}
+
+.preguntas label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilos para los botones */
+button, .boton-pagar {
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover, .boton-pagar:hover {
+    background-color: #b02557;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
